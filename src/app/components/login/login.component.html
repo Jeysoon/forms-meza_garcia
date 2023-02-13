@@ -15,6 +15,6 @@
       <div *ngIf="formularioLogin.controls['contrasena'].errors?.['required'] && formularioLogin.controls['contrasena'].touched " class="invalido">Campo contraseña no puede estar vacio</div>
       <div *ngIf="formularioLogin.controls['contrasena'].errors?.['minlength'] && formularioLogin.controls['contrasena'].touched" class="invalido">Campo contraseña debe tener al menos 8 caracteres</div>
     </div>
-    <button type="submit" [ngClass]="formularioLogin.status === 'VALID' ? 'btn btn-primary' : 'btn btn-secondary'">Submit</button>
+    <button [disabled]="formularioLogin.status !== 'VALID'" type="submit" [ngClass]="formularioLogin.status === 'VALID' ? 'btn btn-primary' : 'btn btn-secondary'">Submit</button>
   </form>
 </div>
