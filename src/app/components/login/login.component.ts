@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit() {
+    console.log('ngOnInit login');
   }
   login(){
     console.log(this.formularioLogin);
